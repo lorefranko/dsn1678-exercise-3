@@ -9,6 +9,7 @@ html {
   font: normal 100%/1.5 sans-serif;
 }
 
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -87,10 +88,16 @@ body {
   padding: 2em;
   position: absolute;
   width: 90%;
-
+  opacity: 0;
   background-color: #000;
   border-radius: 6px;
 }
+
+.sales__details[data-state="active"] {
+  opacity: 1;
+}
+
+
 
 .sales__details::before {
   top: -10px;

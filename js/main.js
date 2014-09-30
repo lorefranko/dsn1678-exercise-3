@@ -1,11 +1,11 @@
 var rightSalesdetails = $('.right__salesdetails');
-var rightsSales = $('.right__sales');
+var rightSales = $('.right__sales');
 /*
 	Functions are reusable pieces of code
 	They're basically code stored inside variables
 */
-var salesClickHandler = function () {
-	var isActive = rightSales.attr('data-state');
+var rightSalesClickHandler = function () {
+	var isActive = rightSalesdetails.attr('data-state');
 
 	if (isActive == 'active') {
 		rightSalesdetails.attr('data-state', 'inactive');
@@ -14,7 +14,7 @@ var salesClickHandler = function () {
 	}
 };
 
-rightSales.on('click', salesClickHandler);
+rightSales.on('click', rightSalesClickHandler);
 
 
 
@@ -24,8 +24,8 @@ var leftSales = $('.left__sales');
 	Functions are reusable pieces of code
 	They're basically code stored inside variables
 */
-var salesClickHandler = function () {
-	var isActive = leftSales.attr('data-state');
+var leftSalesClickHandler = function () {
+	var isActive = leftSalesdetails.attr('data-state');
 
 	if (isActive == 'active') {
 		leftSalesdetails.attr('data-state', 'inactive');
@@ -34,4 +34,4 @@ var salesClickHandler = function () {
 	}
 };
 
-leftSales.on('click', salesClickHandler);
+leftSales.on('click', leftSalesClickHandler);
